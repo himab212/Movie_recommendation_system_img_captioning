@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>HIMA PENUMURU</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>HIMA PENUMURU</title>
+	<style>
+    html {
+      scroll-behavior: smooth;
+    }]
+    .main {
+        width: 50%;
+        margin: 50px auto;
+    }
+    .form-control{
+        width:20%
+    }
+    </style>
+
+</head>
+<body  class="body">
+<center><h1><font color="pink">MOVIE SEARCH</font></h1></center>
+	<div class="container">
+        <form action = "http://localhost:5001/imageCaptioning" method = "POST">
+         	<div class="form-group" style="margin-top: 15rem; padding-left: 25rem;">
+          		<input type="text" class="form-control" placeholder="Search" name = "textSearch" style="float:left; width: 50%;">
+                <button type="submit" class="btn btn-default" value = "submit" class="btn btn-default"> IMAGE SEARCH</button>
+        	</div>
+      	</form>
+	</div>
+	<div style="padding: 2rem">
+		{% for image in content%}
+			<div  class="well well-sm"style=" height: 25rem; width: 27rem; float: left;">
+				<img src="{{url_for('send_image', filename=image.document_id+1)}}" style=" height: 15rem; width: 15rem;">
+				<div>{{image.title}}</div>
+			</div>
+		{% endfor%}
+	</div>
+</body>
+</html>

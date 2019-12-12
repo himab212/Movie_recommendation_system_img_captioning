@@ -1,0 +1,33 @@
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>HIMA PENUMURU</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .main {
+        width: 72%;
+        margin: 65px auto;
+    }
+    .form-control{
+        width:25%
+    }
+    </style>
+</head>
+<body  class="body"  >
+
+    <div class="container">
+        <form action = "http://localhost:5000/result" method = "POST">
+         	<div class="form-group" style="margin-top: 20rem; padding-left: 20rem;">
+          		<input type="text" class="form-control" placeholder="enter text" name = "textSearch" style="float:left; width: 75%;">
+				<button type="submit" class="btn btn-success" value = "search" class="btn btn-success">search</button>
+        	</div>
+            <div>
+            </div>
+            <div><H1><center>END OF RESULTS</center></H1></div>
+      </form>
+    </div>
+</body>
